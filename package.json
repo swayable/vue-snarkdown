@@ -1,0 +1,36 @@
+{
+  "name": "vue-snarkdown",
+  "version": "1.0.0",
+  "main": "dist/vue-snarkdown.js",
+  "module": "dist/vue-snarkdown.esm.js",
+  "unpkg": "dist/vue-snarkdown.min.js",
+  "browser": {
+    "./sfc": "src/vue-snarkdown.vue"
+  },
+  "scripts": {
+    "build": "yarn run build:umd & yarn run build:es & yarn run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue-snarkdown.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-snarkdown.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-snarkdown.min.js"
+  },
+  "author": "Swayable",
+  "contributors": [
+    "Josh Dean <jdbdean@gmail.com>"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "rollup": "^1.4.1",
+    "rollup-plugin-buble": "^0.19.6",
+    "rollup-plugin-commonjs": "^9.2.1",
+    "rollup-plugin-vue": "^4.7.2",
+    "vue": "^2.6.8",
+    "vue-template-compiler": "^2.6.8"
+  },
+  "dependencies": {
+    "snarkdown": "^1.2.2"
+  },
+  "files": [
+    "src",
+    "dist"
+  ]
+}
