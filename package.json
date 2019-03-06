@@ -1,6 +1,7 @@
 {
-  "name": "vue-snarkdown",
-  "version": "1.0.0",
+  "name": "@swayable/vue-snarkdown",
+  "version": "1.0.1",
+  "description": "Vue component implementing Snarkdown, transforming Markdown into HTML.",
   "main": "dist/vue-snarkdown.js",
   "module": "dist/vue-snarkdown.esm.js",
   "unpkg": "dist/vue-snarkdown.min.js",
@@ -32,5 +33,17 @@
   "files": [
     "src",
     "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "markdown",
+    "gfm",
+    "md",
+    "html",
+    "parser",
+    "vue",
+    "snarkdown"
   ]
 }
