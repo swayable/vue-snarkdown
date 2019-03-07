@@ -4,6 +4,9 @@
 
 A lightweight Vue component wrapping the tiny Markdown parser [Snarkdown](https://github.com/developit/snarkdown)
 
+## Installation
+`npm install @swayable/vue-snarkdown`
+
 ## Usage
 
 _this_ is **easy** to `use`.
@@ -16,7 +19,7 @@ _this_ is **easy** to `use`.
 </template>
 
 <script>
-import VueSnarkdown from './vue-snarkdown'
+import VueSnarkdown from '@swayable/vue-snarkdown'
 
 export default {
   components: {
