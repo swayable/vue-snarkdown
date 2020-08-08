@@ -1,14 +1,15 @@
 {
   "name": "@swayable/vue-snarkdown",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Vue component implementing Snarkdown, transforming Markdown into HTML.",
   "main": "dist/vue-snarkdown.js",
   "module": "dist/vue-snarkdown.esm.js",
   "unpkg": "dist/vue-snarkdown.min.js",
   "browser": {
-    "./sfc": "src/vue-snarkdown.vue"
+    "./sfc": "src/vue-snarkdown.js"
   },
   "scripts": {
+    "test": "jest",
     "build": "yarn run build:umd & yarn run build:es & yarn run build:unpkg",
     "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue-snarkdown.umd.js",
     "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-snarkdown.esm.js",
@@ -20,6 +21,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "jest": "^26.2.2",
     "rollup": "^1.4.1",
     "rollup-plugin-buble": "^0.19.6",
     "rollup-plugin-commonjs": "^9.2.1",

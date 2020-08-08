@@ -1,5 +1,5 @@
 // Import vue component
-import vueSnarkdown from './vue-snarkdown.vue';
+import vueSnarkdown from './vue-snarkdown.js';
 
 // Declare install function executed by Vue.use()
 export function install(Vue) {
