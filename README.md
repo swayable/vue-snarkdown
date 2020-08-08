@@ -13,17 +13,17 @@ _this_ is **easy** to `use`.
 
 ```html
 <template>
-  <vue-snarkdown>
+  <Snarkdown>
     _this_ is **easy** to `use`.
-  </vue-snarkdown>
+  </Snarkdown>
 </template>
 
 <script>
-import VueSnarkdown from '@swayable/vue-snarkdown'
+import Snarkdown from '@swayable/vue-snarkdown'
 
 export default {
   components: {
-    VueSnarkdown,
+    Snarkdown,
   },
 }
 </script>
