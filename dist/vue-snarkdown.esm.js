@@ -1,16 +1,20 @@
 import snarkdown from 'snarkdown';
 
 var vueSnarkdown = {
-  template: "<div v-html='html' />",
-  name: 'Snarkdown',
-  global: true,
+  render: function(createElement) {
+    return createElement( 'div', { domProps: { innerHTML: this.html } })
+  },
   props: {
     markdown: { type: String },
   },
   computed: {
     html: function html() {
-      return snarkdown(this.markdown || '')
+      var md = this.markdown || this.slotMarkdown || '';
+      return snarkdown(md)
     },
+    slotMarkdown: function slotMarkdown() {
+      return this.$slots.default && this.$slots.default[0].text
+    }
   },
 };
 

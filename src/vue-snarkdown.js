@@ -1,7 +1,9 @@
 const snarkdown = require('snarkdown')
 
 module.exports = {
-  template: "<div v-html='html' />",
+  render: function(createElement) {
+    return createElement( 'div', { domProps: { innerHTML: this.html } })
+  },
   props: {
     markdown: { type: String },
   },
