@@ -2,11 +2,11 @@
   "name": "@swayable/vue-snarkdown",
   "version": "1.1.1",
   "description": "Vue component implementing Snarkdown, transforming Markdown into HTML.",
-  "main": "dist/vue-snarkdown.js",
+  "main": "dist/vue-snarkdown.umd.js",
   "module": "dist/vue-snarkdown.esm.js",
   "unpkg": "dist/vue-snarkdown.min.js",
   "browser": {
-    "./sfc": "src/vue-snarkdown.js"
+    "./sfc": "src/vue-snarkdown.min.js"
   },
   "scripts": {
     "test": "jest",
