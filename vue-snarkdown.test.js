@@ -1,6 +1,6 @@
-const Vue = require('vue/dist/vue')
-const VueSnarkdown = require('./src/vue-snarkdown.js')
-Vue.component('Snarkdown', VueSnarkdown);
+import { mount } from '@vue/test-utils'
+import VueSnarkdown from './src/vue-snarkdown.js'
+import { describe, it, expect} from 'vitest'
 
 describe('VueSnarkdown', () => {
   const markdown = '_this_ is **easy** to `use`.'
@@ -8,19 +8,23 @@ describe('VueSnarkdown', () => {
 
   describe('using markdown prop', () => {
     it('renders markdown', () => {
-      const vm = new Vue({
-        template: `<Snarkdown markdown='${markdown}' />`,
-      }).$mount()
-      expect(vm.$el.innerHTML).toBe(expectedHtml)
+      const wrapper = mount(VueSnarkdown, {
+        props: {
+          markdown,
+        },
+      })
+      expect(wrapper.html()).toContain(expectedHtml)
     })
   })
 
   describe('using the default slot', () => {
     it('renders markdown', () => {
-      const vm = new Vue({
-        template: `<Snarkdown>${markdown}</Snarkdown>`,
-      }).$mount()
-      expect(vm.$el.innerHTML).toBe(expectedHtml)
+      const wrapper = mount(VueSnarkdown, {
+        slots: {
+          default: markdown,
+        },
+      })
+      expect(wrapper.html()).toContain(expectedHtml)
     })
   })
 })
