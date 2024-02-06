@@ -4,6 +4,10 @@
 
 Single dependency Vue component wrapping the tiny Markdown parser [Snarkdown](https://github.com/developit/snarkdown)
 
+*Now Vue 3 compatible!*
+
+(For Vue 2, use version 2.0.0)
+
 ## Installation
 `npm install @swayable/vue-snarkdown`
 
