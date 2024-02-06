@@ -27,8 +27,7 @@ const C = {
   name: "VueSnarkdown",
   props: {
     markdown: {
-      type: String,
-      required: !0
+      type: String
     }
   },
   computed: {
