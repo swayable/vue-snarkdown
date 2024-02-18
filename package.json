@@ -1,6 +1,6 @@
 {
   "name": "@swayable/vue-snarkdown",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "Vue component implementing Snarkdown, transforming Markdown into HTML.",
   "main": "dist/vue-snarkdown.umd.js",
   "module": "dist/vue-snarkdown.es.js",
