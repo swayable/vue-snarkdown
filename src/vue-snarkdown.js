@@ -15,9 +15,7 @@ export default {
     },
 
     slotMarkdown() {
-      let slotContents = this.$slots.default()?.[0]?.children
-      if (!this.markdown && !slotContents) console.warn('No markdown found in default slot. Provide markdown prop or default slot.')
-      console.log(slotContents)
+      let slotContents = this.$slots.default ? this.$slots.default()[0].children : undefined;
       return slotContents || ''
     }
   },
