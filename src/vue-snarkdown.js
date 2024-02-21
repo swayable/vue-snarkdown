@@ -15,7 +15,7 @@ export default {
     },
 
     slotMarkdown() {
-      let slotContents = this.$slots.default ? this.$slots.default()[0].children : undefined;
+      let slotContents = this.$slots.default ? this.$slots.default()[0].children : undefined
       return slotContents || ''
     }
   },
