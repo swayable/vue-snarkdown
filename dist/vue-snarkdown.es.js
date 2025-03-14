@@ -13,14 +13,12 @@ function m(n, k) {
     return a ? a[1] ? (d ? s.pop() : s.push(o), a[0 | d]) : a[0] : o;
   }
   function $() {
-    for (var o = ""; s.length; )
-      o += f(s[s.length - 1]);
+    for (var o = ""; s.length; ) o += f(s[s.length - 1]);
     return o;
   }
   for (n = n.replace(/^\[(.+?)\]:\s*(.+)$/gm, function(o, a, d) {
     return p[a.toLowerCase()] = d, "";
-  }).replace(/^\n+|\n+$/g, ""); e = h.exec(n); )
-    u = n.substring(i, e.index), i = h.lastIndex, r = e[0], u.match(/[^\\](\\\\)*\\$/) || ((t = e[3] || e[4]) ? r = '<pre class="code ' + (e[4] ? "poetry" : e[2].toLowerCase()) + '"><code' + (e[2] ? ' class="language-' + e[2].toLowerCase() + '"' : "") + ">" + w(c(t).replace(/^\n+|\n+$/g, "")) + "</code></pre>" : (t = e[6]) ? (t.match(/\./) && (e[5] = e[5].replace(/^\d+/gm, "")), g = m(w(e[5].replace(/^\s*[>*+.-]/gm, ""))), t == ">" ? t = "blockquote" : (t = t.match(/\./) ? "ol" : "ul", g = g.replace(/^(.*)(\n|$)/gm, "<li>$1</li>")), r = "<" + t + ">" + g + "</" + t + ">") : e[8] ? r = '<img src="' + c(e[8]) + '" alt="' + c(e[7]) + '">' : e[10] ? (l = l.replace("<a>", '<a href="' + c(e[11] || p[u.toLowerCase()]) + '">'), r = $() + "</a>") : e[9] ? r = "<a>" : e[12] || e[14] ? r = "<" + (t = "h" + (e[14] ? e[14].length : e[13] > "=" ? 1 : 2)) + ">" + m(e[12] || e[15], p) + "</" + t + ">" : e[16] ? r = "<code>" + c(e[16]) + "</code>" : (e[17] || e[1]) && (r = f(e[17] || "--"))), l += u, l += r;
+  }).replace(/^\n+|\n+$/g, ""); e = h.exec(n); ) u = n.substring(i, e.index), i = h.lastIndex, r = e[0], u.match(/[^\\](\\\\)*\\$/) || ((t = e[3] || e[4]) ? r = '<pre class="code ' + (e[4] ? "poetry" : e[2].toLowerCase()) + '"><code' + (e[2] ? ' class="language-' + e[2].toLowerCase() + '"' : "") + ">" + w(c(t).replace(/^\n+|\n+$/g, "")) + "</code></pre>" : (t = e[6]) ? (t.match(/\./) && (e[5] = e[5].replace(/^\d+/gm, "")), g = m(w(e[5].replace(/^\s*[>*+.-]/gm, ""))), t == ">" ? t = "blockquote" : (t = t.match(/\./) ? "ol" : "ul", g = g.replace(/^(.*)(\n|$)/gm, "<li>$1</li>")), r = "<" + t + ">" + g + "</" + t + ">") : e[8] ? r = '<img src="' + c(e[8]) + '" alt="' + c(e[7]) + '">' : e[10] ? (l = l.replace("<a>", '<a href="' + c(e[11] || p[u.toLowerCase()]) + '">'), r = $() + "</a>") : e[9] ? r = "<a>" : e[12] || e[14] ? r = "<" + (t = "h" + (e[14] ? e[14].length : e[13] > "=" ? 1 : 2)) + ">" + m(e[12] || e[15], p) + "</" + t + ">" : e[16] ? r = "<code>" + c(e[16]) + "</code>" : (e[17] || e[1]) && (r = f(e[17] || "--"))), l += u, l += r;
   return (l + n.substring(i) + $()).replace(/^\n+|\n+$/g, "");
 }
 const x = {
